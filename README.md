@@ -1,4 +1,6 @@
-# How to add a charts 
+## Helm chart repo
+
+## How to add a charts 
 
 ```
 $ helm create <CHART_NAME>
@@ -15,4 +17,22 @@ $ git commit -m "update"
 $ git push 
 ```
 
+## How to use this repo
+
+```
+# add repo
+$ helm repo add ogre0403 https://ogre0403.github.io/charts
+
+# update repo
+$ helm repo update
+
+# search repo
+$ helm search repo ogre0403 -l
+
+# install helm chart from repo
+$ helm install <RELEASE-NAME> ogre0403/nginx
+
+# delete release
+$ helm delete <RELEASE-NAME>
+```
 
