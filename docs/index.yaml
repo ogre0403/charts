@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
   nginx:
-    - created: 2016-11-18T15:05:51.078570269-07:00
-      description: Deploy a basic Alpine Linux pod
-      digest: aaaa
-      home: https://k8s.io/helm
-      name: alpine
-      sources:
-        - https://github.com/kubernetes/helm
-      urls:
-        - nginx-0.1.0.tgz
-      version: 0.1.0
-generated: 2016-11-18T15:05:51.077257234-07:00
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-05-12T15:43:20.642786+08:00"
+    description: A Helm chart for Kubernetes
+    digest: e628bf3874fdb77790b725765814e4f38426d13709d6d3877c1c289cb89ae000
+    name: nginx
+    type: application
+    urls:
+    - https://ogre0403.github.io/charts/nginx-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-05-12T15:43:20.641807+08:00"
