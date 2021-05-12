@@ -1,6 +1,6 @@
 apiVersion: v1
 entries:
-  mychart:
+  nginx:
     - created: 2016-11-18T15:05:51.078570269-07:00
       description: Deploy a basic Alpine Linux pod
       digest: aaaa
@@ -9,6 +9,6 @@ entries:
       sources:
         - https://github.com/kubernetes/helm
       urls:
-        - mychart-0.1.0.tgz
+        - nginx-0.1.0.tgz
       version: 0.1.0
 generated: 2016-11-18T15:05:51.077257234-07:00
