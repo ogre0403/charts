@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   imagepullsecrets:
   - apiVersion: v1
-    created: "2021-05-14T16:21:07.141897+08:00"
+    created: "2021-05-14T16:24:14.41431+08:00"
     description: Declarative configuration for imagepullsecrets
     digest: 321f7ec01b4e3a5a182248ac8404e7714914c32826b595dfc130cf05c0accdfa
     keywords:
@@ -20,7 +20,7 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-05-14T16:21:07.142886+08:00"
+    created: "2021-05-14T16:24:14.415159+08:00"
     description: A sample nginx chart for Kubernetes
     digest: e12b9319d41f7640fa3c220c4721d2ab0e375dee8b6d158d88879f9b5691dabf
     name: nginx
@@ -28,4 +28,4 @@ entries:
     urls:
     - https://ogre0403.github.io/charts/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-14T16:21:07.140752+08:00"
+generated: "2021-05-14T16:24:14.413409+08:00"
