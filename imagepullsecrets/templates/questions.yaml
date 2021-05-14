@@ -1,0 +1,29 @@
+questions:
+  - variable: imagePullSecret.registryURL
+    default: "registry.k8s.example.com:5000"
+    description: "private docker registry"
+    type: string
+    required: true
+    label: private registry url
+    group: "Registry Settings"
+  - variable: imagePullSecret.secretName
+    default: "registry-pullsecret"
+    description: "secret for private registry"
+    type: string
+    required: true
+    label: secret for private registry
+    group: "Registry Settings"
+  - variable: imagePullSecret.username
+    default: "user"
+    description: "private registry user name"
+    type: string
+    required: true
+    label: private registry user name
+    group: "Registry Settings"
+  - variable: imagePullSecret.password
+    default: "password"
+    description: "private registry password"
+    type: string
+    required: true
+    label: private registry password
+    group: "Registry Settings"
