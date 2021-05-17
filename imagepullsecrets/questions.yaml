@@ -1,6 +1,6 @@
 questions:
   - variable: imagePullSecret.registryURL
-    default: "registry.k8s.example.com:5000"
+    default: "registry.gitlab.com"
     description: "private docker registry"
     type: string
     required: true
