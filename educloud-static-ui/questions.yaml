@@ -1,0 +1,7 @@
+questions:
+  - variable: imagePullSecrets
+    default: "regcred"
+    description: "Image Pull Secret"
+    type: string
+    label: Image Pull Secret
+    group: "Image Registry Settings"
