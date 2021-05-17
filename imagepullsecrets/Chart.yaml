@@ -7,7 +7,7 @@ keywords:
   - docker-registry
   - imagepullsecrets
 maintainers:
-  - email: gabibbo97@gmail.com
-    name: gabibbo97
+  - email: ogre0403@gmail.com
+    name: ogre0403
 name: imagepullsecrets
-version: 3.0.1
+version: 0.1.0

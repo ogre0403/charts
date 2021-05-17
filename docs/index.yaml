@@ -2,41 +2,25 @@ apiVersion: v1
 entries:
   imagepullsecrets:
   - apiVersion: v1
-    created: "2021-05-14T16:32:15.284745+08:00"
+    created: "2021-05-17T09:56:40.51659+08:00"
     description: Declarative configuration for imagepullsecrets
-    digest: 6505445459e6a4b6ef03567bfe762683d0cd9fa2b446f862a369e18cd16cb8fa
+    digest: 9680e6531ee43c2f188246e8d3491dd9e1235db0bb13f9ac16d558f075650528
     keywords:
     - authentication
     - secrets
     - docker-registry
     - imagepullsecrets
     maintainers:
-    - email: gabibbo97@gmail.com
-      name: gabibbo97
+    - email: ogre0403@gmail.com
+      name: ogre0403
     name: imagepullsecrets
     urls:
-    - https://ogre0403.github.io/charts/imagepullsecrets-3.0.1.tgz
-    version: 3.0.1
-  - apiVersion: v1
-    created: "2021-05-14T16:32:15.28271+08:00"
-    description: Declarative configuration for imagepullsecrets
-    digest: 321f7ec01b4e3a5a182248ac8404e7714914c32826b595dfc130cf05c0accdfa
-    keywords:
-    - authentication
-    - secrets
-    - docker-registry
-    - imagepullsecrets
-    maintainers:
-    - email: gabibbo97@gmail.com
-      name: gabibbo97
-    name: imagepullsecrets
-    urls:
-    - https://ogre0403.github.io/charts/imagepullsecrets-3.0.0.tgz
-    version: 3.0.0
+    - https://ogre0403.github.io/charts/imagepullsecrets-0.1.0.tgz
+    version: 0.1.0
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-05-14T16:32:15.286081+08:00"
+    created: "2021-05-17T09:56:40.517333+08:00"
     description: A sample nginx chart for Kubernetes
     digest: e12b9319d41f7640fa3c220c4721d2ab0e375dee8b6d158d88879f9b5691dabf
     name: nginx
@@ -44,4 +28,4 @@ entries:
     urls:
     - https://ogre0403.github.io/charts/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-14T16:32:15.281631+08:00"
+generated: "2021-05-17T09:56:40.515913+08:00"
