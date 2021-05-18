@@ -74,7 +74,7 @@ questions:
           foJmyXj1uj9GzpYe6v8mXVo=
           -----END PRIVATE KEY-----
         description: "TLS key"
-        type: string
+        type: multiline
         label: tls key
       - variable: ingress.tls.certificate
         default: |-
@@ -104,7 +104,7 @@ questions:
           194Pq51ZqjE43euyHVYkGFqvk4KO22rblTuqD8mk1MZtPdJV212O
           -----END CERTIFICATE-----
         description: "TLS certificate"
-        type: string
+        type: multiline
         label: tls certificate
   - variable: hostname
     show_if: "service.type=NodePort"
