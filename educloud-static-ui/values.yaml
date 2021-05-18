@@ -26,5 +26,6 @@ ingress:
   # host: chart-example.local
   serviceName: chart-example.local
   servicePort: 80
-  # tls:
-  # secretName: chart-example-tls
+  tls:
+    enable: false
+    # secretName: chart-example-tls

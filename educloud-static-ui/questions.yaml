@@ -29,6 +29,20 @@ questions:
     type: string
     label: Nginx ingress URL
     group: "Access Type"
+  - variable: "ingress.enable"
+    show_if: "service.type=ClusterIP"
+    default: false
+    description: "enable TLS"
+    type: boolean
+    label: Nginx ingress URL
+    group: "Access Type"
+    show_subquestion_if: true
+    subquestions:
+      - variable: ingress.tls.secretName
+        default: ""
+        description: "TLS Secret"
+        type: string
+        label: tls secret
   - variable: hostname
     show_if: "service.type=NodePort"
     default: "140-110-136-74.nip.io"
