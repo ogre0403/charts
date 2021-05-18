@@ -13,6 +13,13 @@ questions:
         description: "Image Pull Secret"
         type: string
         label: Image Pull Secret
+  - variable: hostname
+    default: "140-110-136-74.nip.io"
+    description: "website URL "
+    type: string
+    required: true
+    label: hostname
+    group: "Access Type"
   - variable: service.type
     default: "NodePort"
     description: "Set Service Type"
@@ -22,17 +29,11 @@ questions:
       - "ClusterIP"
     label: Log Level
     group: "Access Type"
-  - variable: ingress.enabled
-    default: "false"
-    description: "Enable ingress for UI"
-    type: boolean
-    required: true
-    label: Nginx ingress Enabled
-    show_subquestion_if: true
+    show_subquestion_if: "ClusterIP"
     group: "Access Type"
     subquestions:
       - variable: "ingress.host"
-        default: "test.140-110-136-74.nip.io"
+        default: "ui.140-110-136-74.nip.io"
         description: "Nginx ingress URL"
         type: string
         label: Nginx ingress URL

@@ -17,16 +17,17 @@ nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
 
+hostname: 140-110-136-74.nip.io
+
 ingress:
-  enabled: false
   host: chart-example.local
   serviceName: chart-example.local
   servicePort: 80
-  tls:
-    secretName: chart-example-tls
+  # tls:
+  # secretName: chart-example-tls
 
 resources:
   {}
