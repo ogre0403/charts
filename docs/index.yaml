@@ -3,9 +3,9 @@ entries:
   educloud-static-ui:
   - apiVersion: v2
     appVersion: "2020.11"
-    created: "2021-05-17T17:40:21.957128+08:00"
+    created: "2021-05-18T09:11:41.212146+08:00"
     description: Helm chart for static educloud ui
-    digest: 52237e0565a31439675f6ea4a9348c08f5258c2e3decc599c810ae15730e565d
+    digest: b6600ce43031937976559154dacd87c85e8d53a261e3234ddd78fb92ac4a5da8
     name: educloud-static-ui
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.0
   imagepullsecrets:
   - apiVersion: v1
-    created: "2021-05-17T17:40:21.96038+08:00"
+    created: "2021-05-18T09:11:41.213542+08:00"
     description: Declarative configuration for imagepullsecrets
     digest: 55e2f65534da1a0ac61082adf26c0057480aebc34fba7acfb4b881c8598c978e
     keywords:
@@ -29,7 +29,7 @@ entries:
     - https://ogre0403.github.io/charts/imagepullsecrets/imagepullsecrets-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: "2021-05-17T17:40:21.959649+08:00"
+    created: "2021-05-18T09:11:41.212953+08:00"
     description: Declarative configuration for imagepullsecrets
     digest: 49b4ecda8156b67f2320af2414f6b7bb6923bfb92ee7d290ced0ab865ad511a8
     keywords:
@@ -47,7 +47,7 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-05-17T17:40:21.961404+08:00"
+    created: "2021-05-18T09:11:41.214841+08:00"
     description: A sample nginx chart for Kubernetes
     digest: 4656ae0636a9eb0532979fdff2e252014883be5b40e812b77eccb12ef086573e
     name: nginx
@@ -55,4 +55,4 @@ entries:
     urls:
     - https://ogre0403.github.io/charts/nginx/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-17T17:40:21.956154+08:00"
+generated: "2021-05-18T09:11:41.210939+08:00"
