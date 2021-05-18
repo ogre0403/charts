@@ -27,10 +27,17 @@ questions:
     options:
       - "NodePort"
       - "ClusterIP"
-    label: Log Level
+    label: Service Type
     group: "Access Type"
+    show_subquestion_if: "NodePort"
+    subquestions:
+      - variable: hostname
+        default: "140-110-136-74.nip.io"
+        description: "website URL "
+        type: string
+        required: true
+        label: hostname
     show_subquestion_if: "ClusterIP"
-    group: "Access Type"
     subquestions:
       - variable: "ingress.host"
         default: "ui.140-110-136-74.nip.io"
