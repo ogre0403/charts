@@ -22,18 +22,18 @@ questions:
       - "ClusterIP"
     label: Service Type
     group: "Access Type"
-    show_subquestion_if: "NodePort"
-    subquestions:
-      - variable: hostname
-        default: "140-110-136-74.nip.io"
-        description: "website URL "
-        type: string
-        required: true
-        label: hostname
-    show_subquestion_if: "ClusterIP"
-    subquestions:
-      - variable: "ingress.host"
-        default: "ui.140-110-136-74.nip.io"
-        description: "Nginx ingress URL"
-        type: string
-        label: Nginx ingress URL
+  - variable: "ingress.host"
+    show_if: "service.type=ClusterIP"
+    default: "ui.140-110-136-74.nip.io"
+    description: "Nginx ingress URL"
+    type: string
+    label: Nginx ingress URL
+    group: "Access Type"
+  - variable: hostname
+    show_if: "service.type=NodePort"
+    default: "140-110-136-74.nip.io"
+    description: "website URL "
+    type: string
+    required: true
+    label: hostname
+    group: "Access Type"
