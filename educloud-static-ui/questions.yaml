@@ -1,7 +1,15 @@
 questions:
-  - variable: imagePullSecrets
-    default: "regcred"
-    description: "Image Pull Secret"
-    type: string
-    label: Image Pull Secret
+  - variable: image.privateRepository
+    default: "false"
+    description: "define image pull secret name from private repository"
+    type: boolean
+    required: true
+    label: Image Private Registry Settings
+    show_subquestion_if: true
     group: "Image Registry Settings"
+    subquestions:
+      - variable: imagePullSecrets
+        default: "regcred"
+        description: "Image Pull Secret"
+        type: string
+        label: Image Pull Secret

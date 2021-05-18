@@ -50,12 +50,3 @@ app.kubernetes.io/name: {{ include "educloud-static-ui.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
-
-{{- define "educloud-static-ui.imagePullSecrets" -}}
-{{- if .Values.imagePullSecrets }}
-imagePullSecrets:
-{{- range .Values.imagePullSecrets }}
-  - name: {{ . }}
-{{- end }}
-{{- end }}
-{{- end }}

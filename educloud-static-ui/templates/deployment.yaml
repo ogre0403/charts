@@ -26,6 +26,10 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-{{- include "educloud-static-ui.imagePullSecrets" . | indent 6 }}
+      {{- if .Values.imagePullSecrets }}        
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecrets }}
+      {{- end }}
+
 
 

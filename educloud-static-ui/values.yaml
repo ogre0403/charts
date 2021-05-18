@@ -5,13 +5,13 @@
 replicaCount: 1
 
 image:
+  privateRepository: false
   repository: registry.gitlab.com/nchc-ai/aitrain-deploy/twgc/static-site
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: v2020.10
 
-# imagePullSecrets:
-# - regcred
+imagePullSecrets: ""
 
 nameOverride: ""
 fullnameOverride: ""
