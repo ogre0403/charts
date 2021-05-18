@@ -29,12 +29,12 @@ questions:
     type: string
     label: Nginx ingress URL
     group: "Access Type"
-  - variable: "ingress.enable"
+  - variable: "ingress.tls.enable"
     show_if: "service.type=ClusterIP"
     default: false
     description: "enable TLS"
     type: boolean
-    label: Nginx ingress URL
+    label: TLS Secret name
     group: "Access Type"
     show_subquestion_if: true
     subquestions:
@@ -43,6 +43,69 @@ questions:
         description: "TLS Secret"
         type: string
         label: tls secret
+      - variable: ingress.tls.key
+        default: |-
+          -----BEGIN PRIVATE KEY-----
+          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQSyAH9+x2g0Pe
+          J0JasqM+4gGWUqhJUq5FmGskB4CfGJIfB8Gn03wm2KDshV0GV/yTNWnsPT1V6+EJ
+          CMVPdS2/Nallp1HLUhm99fbXQi1vZ3CwGRSYicd7PtdJeYR7uZGrLIHmJfiPVNJM
+          3GVGuG0mNDZ+On2Jiv/yt+Xleth0PtmfKXd2JhLh81p72TV0d3pJcfZkP13R9yfi
+          yRA4ZXO0Ck3Va8SYUHLU7s+nK9T8ATCSvOpZKDSu3X/AyW40ntEzp0ZDYRLuwPH6
+          nlTP+D+B8In61CM9pLkpB8LirL1FeJNCs7HjIcvh8vsRYY3U4vefCPpl+o2/sadC
+          iDlz+KLzAgMBAAECggEANeJZZPZUK8yFcCED32a7KHdbJcI4Ws+S2do2TVnLglze
+          4Dwncv0Y7wu3hbhyekOkyYhV4JFvHp0o2Cd2s7mCniaJrgx88nZIxoWs17789gby
+          dfvnAhcSjeWR2CYhichV0MxwxlMoXBv7U3rokEUBp5J2Tm1fMIfO8sF0Lct714Y7
+          ODvz3rVSSHVvfKwSkUPwdIVipSFc23Xc/qv3PjMH7wU8AaGIxvO9UMwFqwuoS7CE
+          XJDN3++p0lgz/Kj2WMcY5UrO+OXLy5VEADyWWMJgk4rEqi2OKnOa2OX0ZdG3TqNM
+          Cu/btmbdjnFUYg7FTMpGTRKXE08Sb5Fg5Ja9ZZBNoQKBgQDxvG8QykfU/bRHjCC0
+          dfc+pMSmAn2Pu7SfgGU5BJ/otLhBGpgqSEjVNs4WeNSWxJtotpL4OVLtmjjP+YUU
+          hZqndzeYtuG5YN4LJ/9vtI7OFO0QON3gVaVAROQ+8+xPz8U0Y6mZMDH2Zfe0yeKd
+          2qeyv23K1MysD1QjGrIefDHvuwKBgQDclYVW1kADKDq54HoIawee9kcxPRCQreFI
+          r5CoZAauVG9T3c3rTMplxV3mdsTgbVJFaaFY8SbhR0mKOkB4OBl9HFLdHgQ/K1wo
+          i0fpdzT/LtASu7zRJSe1V7rTJiK1oYLFAIB32m3LzP44uqDr4IIR797FDjPN9YZP
+          AVZz7jzaKQKBgHdsiU45ML2XzQ2fu7SLpucKzZ/aESAGMpit/NPrZfi392MqeUxC
+          Q8EZ/zx420XUwZY8xGTfJQn/K9wLQGTAEIR1UEEg8Gj94xSN4RLVl8tV6Twfa/Xd
+          OfODVWOIbBGN6rYUGoB0n+pDu9lT96HWmQykp+ARuz+xnvZsxNxsrNrrAoGAC7I1
+          7sPPgxtX+dEoR1f9gHVIkxjMzw8ZOfRtNDCRlh7OBGFncMmSldDgSL8Vc1z4lsui
+          DYhD6oAQKy8pifZXi6W70xOrX/oZmeDAwGVcvwcpa0TfHyvcLiZntph4EK9usqlz
+          JmfDmKHW/QUQUVGHNBJG+qXlI0+YfonwnpcMTPkCgYEAmgOdLS6AARuliTDj0PnQ
+          AH2P4DI5SS4tvU/MJ/0jfO/y1bVzn/LuIbLd6e2arVZRfcEYuu/VRH9RHxQo8Hpt
+          SKTCuljUAjumODUCTvmGjKx0YVfdZkOEFhINC4wJ/MREoYkoatVkkII1rGvsBGzS
+          foJmyXj1uj9GzpYe6v8mXVo=
+          -----END PRIVATE KEY-----
+        description: "TLS key"
+        type: string
+        label: tls key
+      - variable: ingress.tls.certificate
+        default: |-
+          -----BEGIN CERTIFICATE-----
+          MIIEQzCCAqugAwIBAgIRALkQxXr0K7+GPn0Mdqy3ts0wDQYJKoZIhvcNAQELBQAw
+          YTEeMBwGA1UEChMVbWtjZXJ0IGRldmVsb3BtZW50IENBMRswGQYDVQQLDBJvZ3Jl
+          MDQwM0BNQlAubG9jYWwxIjAgBgNVBAMMGW1rY2VydCBvZ3JlMDQwM0BNQlAubG9j
+          YWwwHhcNMTkwNjAxMDAwMDAwWhcNMzEwNTE4MDgzMzAzWjBdMScwJQYDVQQKEx5t
+          a2NlcnQgZGV2ZWxvcG1lbnQgY2VydGlmaWNhdGUxMjAwBgNVBAsMKW9ncmUwNDAz
+          QHZwbi1oYzM5Lm5jaGMub3JnLnR3ICjojorlrrbpm4spMIIBIjANBgkqhkiG9w0B
+          AQEFAAOCAQ8AMIIBCgKCAQEA0EsgB/fsdoND3idCWrKjPuIBllKoSVKuRZhrJAeA
+          nxiSHwfBp9N8Jtig7IVdBlf8kzVp7D09VevhCQjFT3UtvzWpZadRy1IZvfX210It
+          b2dwsBkUmInHez7XSXmEe7mRqyyB5iX4j1TSTNxlRrhtJjQ2fjp9iYr/8rfl5XrY
+          dD7Znyl3diYS4fNae9k1dHd6SXH2ZD9d0fcn4skQOGVztApN1WvEmFBy1O7PpyvU
+          /AEwkrzqWSg0rt1/wMluNJ7RM6dGQ2ES7sDx+p5Uz/g/gfCJ+tQjPaS5KQfC4qy9
+          RXiTQrOx4yHL4fL7EWGN1OL3nwj6ZfqNv7GnQog5c/ii8wIDAQABo3oweDAOBgNV
+          HQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYDVR0TAQH/BAIwADAf
+          BgNVHSMEGDAWgBTiBiTgOZxHsvf+tM+ZYO4caf0afTAiBgNVHREEGzAZghcqLjE0
+          MC0xMTAtMTM2LTc0Lm5pcC5pbzANBgkqhkiG9w0BAQsFAAOCAYEAhyqQLXacU/jS
+          ZDGUvRDigXPlgiXtNMQvzcDWC8hBSTmnjuygAGVLkydlXOIUKSquNWe6ziaB1zeo
+          VjBHpjn+DeYe3bXzcWwAz1GYMuLJphsklU7JKDwJViJ/+qCUIh4WgFFEoNP/U9Ph
+          qw05sLxDTR01dhO2tX5eA5K61FBohwFXDfDbXDZP+xXlBJMMRBm92vEpssNCZFL9
+          i+K4MQu03E78fJq5glDPsye5dEeHnLXh3fWPZyvt+giALBrZhnftPo3aiSL0PWjn
+          K/qskhryDh7sPpjB+w8xsYv2OLUmAVRZavLG7kX+EvdWvm/6dcJN4pE9fkMPaDJl
+          Ri24R647u4YD/cO+uZ7kR9azQJe+D9ekYyjPGeOaKthcPFMCbDpTMY1Bce/9P6X8
+          yu0qZC3C/GkevPZApZPpg9fHyLyv9PjlVQg8DQl1SSj0+bOz1V2UKeahLFBsS/WC
+          194Pq51ZqjE43euyHVYkGFqvk4KO22rblTuqD8mk1MZtPdJV212O
+          -----END CERTIFICATE-----
+        description: "TLS certificate"
+        type: string
+        label: tls certificate
   - variable: hostname
     show_if: "service.type=NodePort"
     default: "140-110-136-74.nip.io"

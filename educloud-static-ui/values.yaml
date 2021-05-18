@@ -29,3 +29,5 @@ ingress:
   tls:
     enable: false
     # secretName: chart-example-tls
+    # certificate: |-
+    # key: |-
