@@ -3,7 +3,7 @@ entries:
   educloud-static-ui:
   - apiVersion: v2
     appVersion: "2020.11"
-    created: "2021-05-18T17:31:37.868041+08:00"
+    created: "2021-10-11T10:28:22.481911+08:00"
     description: Helm chart for static educloud ui
     digest: b2361652d8e424730e705a4a272ef91a5ed0ea299aeac7b10d7da005a974647e
     name: educloud-static-ui
@@ -13,7 +13,7 @@ entries:
     version: 0.1.7
   imagepullsecrets:
   - apiVersion: v1
-    created: "2021-05-18T17:31:37.868926+08:00"
+    created: "2021-10-11T10:28:22.483651+08:00"
     description: Declarative configuration for imagepullsecrets
     digest: 55e2f65534da1a0ac61082adf26c0057480aebc34fba7acfb4b881c8598c978e
     keywords:
@@ -29,7 +29,7 @@ entries:
     - https://ogre0403.github.io/charts/imagepullsecrets/imagepullsecrets-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: "2021-05-18T17:31:37.868511+08:00"
+    created: "2021-10-11T10:28:22.483003+08:00"
     description: Declarative configuration for imagepullsecrets
     digest: 49b4ecda8156b67f2320af2414f6b7bb6923bfb92ee7d290ced0ab865ad511a8
     keywords:
@@ -47,7 +47,7 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-05-18T17:31:37.869663+08:00"
+    created: "2021-10-11T10:28:22.484411+08:00"
     description: A sample nginx chart for Kubernetes
     digest: 4656ae0636a9eb0532979fdff2e252014883be5b40e812b77eccb12ef086573e
     name: nginx
@@ -55,4 +55,15 @@ entries:
     urls:
     - https://ogre0403.github.io/charts/nginx/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-18T17:31:37.867077+08:00"
+  wordpres-demo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-11T10:28:22.48486+08:00"
+    description: A Helm chart for Kubernetes
+    digest: d0bcb47b3555dc5bd8253a6c2c3213208acce52a2b3f66f70cf03f2eaf98283c
+    name: wordpres-demo
+    type: application
+    urls:
+    - https://ogre0403.github.io/charts/wordpres-demo/wordpres-demo-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-10-11T10:28:22.480603+08:00"

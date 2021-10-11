@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "wordpres-demo-wp.fullname" . }}
+  labels:
+    app: blog
+spec:
+  selector:
+    matchLabels:
+      app: blog
+      tier: wordpress
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      name: wordpress-pod
+      labels:
+        app: blog
+        tier: wordpress
+    spec:
+      containers:
+        - name: wordpress
+          image: wordpress:php7.4
+          env:
+            - name: WORDPRESS_DB_HOST
+              value: mysql-svc:3306
+            - name: WORDPRESS_DB_PASSWORD
+              value: wordpress
+            - name: WORDPRESS_DB_NAME
+              value: wordpress
+            - name: WORDPRESS_DB_USER
+              value: wordpress
